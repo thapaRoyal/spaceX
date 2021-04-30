@@ -110,7 +110,7 @@ header nav .nav-right .search > div img {
 .social div:hover {
   background: var(--pure);
 }
-.cta {
+.hero {
   position: relative;
 }
 .social {
@@ -118,10 +118,38 @@ header nav .nav-right .search > div img {
   left: 0;
   top: 0;
   border-right: 1px solid var(--gray);
-  width: 100px;
+  width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 90vh;
+}
+.hero .cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+.hero .cta h1 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.hero .cta > div {
+  flex: 1;
+}
+.hero .cta .left-section {
+  padding: 0 60px 0 30px;
+}
+.hero .cta .right-section img {
+  height: 70vh;
+  transform: rotate(20deg);
+  animation: moveInSpace 12s ease-in-out infinite alternate;
+}
+@keyframes moveInSpace {
+  50% {
+    transform: translateY(100px) rotate(-30deg) scale(0.4);
+  }
 }
